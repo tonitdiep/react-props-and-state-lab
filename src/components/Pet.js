@@ -36,21 +36,20 @@ class Pet extends React.Component {
           
           )} */}
 
-{this.props.pet.isAdopted && 
+            {this.props.pet.isAdopted && 
 
-<button 
-    className="ui disabled button">
-    Already adopted
-</button> }
+            <button 
+                className="ui disabled button">
+                Already adopted
+            </button> }
 
-{!this.props.pet.isAdopted && (
-<button 
-  onClick={() => this.props.onAdoptPet(this.props.pet.id)}
-  className="ui primary button">
-  Adopt pet
-</button>
-
-)}
+            {!this.props.pet.isAdopted && 
+            <button 
+              onClick={() => this.props.onAdoptPet(this.props.pet.id)}
+              className="ui primary button">
+              Adopt pet
+            </button>
+            }
         </div>
       </div>
     )
